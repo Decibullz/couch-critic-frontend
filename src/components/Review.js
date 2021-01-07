@@ -21,7 +21,7 @@ function Review(props) {
         {
         formVisible ?
         <div>
-            <Form form={props.form} handleSubmit={handleUpdate}/>
+            <Form review={props.review} handleSubmit={handleUpdate}/>
             <button onClick={toggleForm}>Cancel</button>
         </div> 
     
