@@ -4,7 +4,7 @@ import Review from './Review.js';
 
 function Reviews({reviews, handleDelete, handleUpdate}) {
     return (
-        <div>
+        <div className= 'revs'>
             {reviews.map(review => 
                 <Review 
                     key={review.id} 

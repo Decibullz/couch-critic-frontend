@@ -1,7 +1,9 @@
 function Header(props) {
     return (
+
+
         <header>
-            <h1>Couch Critic</h1>
+            <h1><span>Couch Critic</span></h1>
         </header>
     );
 }
