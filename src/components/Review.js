@@ -33,8 +33,8 @@ function Review(props) {
             <p>Review:{props.review.review}</p>
             <p>Where to Watch:{props.review.watch}</p>
     
-            <button onClick={()=> props.handleDelete(props.review)}>❌</button>
-            <button onClick={toggleForm}>Edit</button>
+            <button class= "myButton" onClick={()=> props.handleDelete(props.review)}>Delete</button>
+            <button class= "myButton" onClick={toggleForm}>Edit</button>
         </div>
         }
         </>
