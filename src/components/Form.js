@@ -36,7 +36,8 @@ function Form(props) {
         props.handleSubmit(event, formState);
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="container" onSubmit={handleSubmit}>
+            <div className="review">
             <Input
                 handleChange={handleChange}
                 name="title"
@@ -45,6 +46,8 @@ function Form(props) {
                 value={formState.title}
                 id="title"
             />
+
+
             <Input
                 handleChange={handleChange}
                 name="image"
@@ -61,6 +64,18 @@ function Form(props) {
                 value={formState.rating}
                 id="rating"
             />
+
+          
+                <Input
+                    handleChange={handleChange}
+                    name="watch"
+                    placeholder="Where to watch"
+                    type="text"
+                    value={formState.watch}
+                    id="watch"
+                />
+            
+
             <Input
                 handleChange={handleChange}
                 name="review"
@@ -68,16 +83,11 @@ function Form(props) {
                 type="text-area"
                 value={formState.review}
                 id="review"
-            />
-            <Input
-                handleChange={handleChange}
-                name="watch"
-                placeholder="Where to watch"
-                type="text"
-                value={formState.watch}
-                id="watch"
-            />
-            <input type="submit" value={props.review ? 'Edit review' : 'Add review'}/>
+                />
+
+                </div>
+
+            <input className= "myButton" type="submit" value={props.review ? 'Edit review' : 'Add review'}/>
         </form>
     );
 }

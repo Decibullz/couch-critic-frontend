@@ -3,8 +3,26 @@ import Aside from './components/Aside';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
-import Nav from './components/Nav';
+import styled from 'styled-components';
 import './App.css';
+
+const Atag = styled.a`
+  color:Black;
+  font-size: 100px;
+  font-family: East Sea Dokdo;
+`
+const Btag = styled.b`
+  color:#black;
+  font-size: 50px;
+  font-family: East Sea Dokdo;
+
+`
+// const Ctag = styled.c`
+//   color:black;
+//   font-size: 75px;
+//   font-family: East Sea Dokdo;
+
+// `
 
 function App() {
   const [reviewsState, setReviewsState] = useState({ reviews: [] });
@@ -69,12 +87,24 @@ function App() {
 
   return (
     <div className="App">
-      <div className='container'>
+      <div>
+        
+        <Atag>
         <Header />
+        </Atag>
+
+        <Atag>
         <Aside handleSubmit={handleAdd} />
-        <Main reviews={reviewsState.reviews} handleDelete={handleDelete} handleUpdate={handleUpdate}/>
-        <Nav />
+        </Atag>
+
+        <div>
+         <Main reviews={reviewsState.reviews} handleDelete={handleDelete} handleUpdate={handleUpdate}/>
+        </div>
+
+        <Btag>
         <Footer />
+        </Btag>
+
       </div>
     </div>
   );

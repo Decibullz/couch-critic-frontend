@@ -1,7 +1,7 @@
 function Footer(props) {
     return (
         <footer>
-            <h1>Footer</h1>
+            <h1><span>Developed by CKt 2021</span></h1>
         </footer>
     );
 }
