@@ -3,7 +3,6 @@ import Aside from './components/Aside';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
-import Nav from './components/Nav';
 import styled from 'styled-components';
 import './App.css';
 
@@ -101,9 +100,6 @@ function App() {
         <div>
          <Main reviews={reviewsState.reviews} handleDelete={handleDelete} handleUpdate={handleUpdate}/>
         </div>
-
-
-        <Nav />
 
         <Btag>
         <Footer />
