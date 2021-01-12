@@ -16,7 +16,7 @@ A web application where one can leave reviews for their favorite movies or shows
 <img src= 'public/couchcritic2.png'>
 
 ## Getting Started
-[Click Here]() to see the deployed app!
+[Click Here](https://couch-critic.herokuapp.com/) to see the deployed app!
 
 ## Future Enchancments
 - Add a star rating
