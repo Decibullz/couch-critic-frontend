@@ -32,7 +32,7 @@ function App() {
   
   function handleAdd(event, formInputs) {
     event.preventDefault()
-    fetch('/entertainments', {
+    fetch('https://couch-critic-api.herokuapp.com/entertainments', {
       body: JSON.stringify(formInputs),
       method: 'POST',
       headers: {
@@ -48,15 +48,15 @@ function App() {
   }
   
   function getReviews() {
-    fetch('/entertainments')
+    fetch('https://couch-critic-api.herokuapp.com/entertainments')
     .then(res => res.json())
     .then(data => setReviewsState({reviews: data}))
     .catch(error => console.error(error));
   }
   
   function handleDelete(deletedReview) {
-    // might be /entertainments
-    fetch(`/entertainments/${deletedReview.id}`, {
+    // might be https://couch-critic-api.herokuapp.com/entertainments
+    fetch(`https://couch-critic-api.herokuapp.com/entertainments/${deletedReview.id}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -72,7 +72,7 @@ function App() {
   
   function handleUpdate(event, formInputs){
     event.preventDefault()
-      fetch(`/entertainments/${formInputs.id}`,{
+      fetch(`https://couch-critic-api.herokuapp.com/entertainments/${formInputs.id}`,{
         method:'PUT',
         body: JSON.stringify(formInputs),
         headers:{
